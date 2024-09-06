@@ -5,7 +5,7 @@
 This lab simulates an attack on an endpoint device, demonstrating how to detect and respond to the threat effectively. This was done using two virtual machines. The victim machine ran Windows 10, a commonly used operating system, equipped with Elastic Security for threat detection and response. The attacking machine ran Kali Linux, allowing me to utilize its built-in offensive security tools.
 
 ## Set up
-I started by setting up the Windows machine as and endpoint device by adding the Elastic Agent with Elastic Security to it.
+I started by setting up the Windows machine as an endpoint device by adding the Elastic Agent with Elastic Security to it.
 
 ![agentconfirmation](https://github.com/user-attachments/assets/c4a63935-1173-4347-afb6-33ad400602aa)
 
@@ -30,7 +30,7 @@ One the payload is embeded in the HTML file it is ran on a server ready to be vi
 
 ![server](https://github.com/user-attachments/assets/d5d560c5-d1f7-4079-8cea-9afb49386d51)
 
-Back on the windows machine when the server is visited the website will show and the payload will automatically download.
+Back on the windows machine as soon as you access the websites server, the payload will automatically download.
 
 ![htmlinbed](https://github.com/user-attachments/assets/20aeac7e-6741-4b41-9da4-95410b9c86eb)
 
