@@ -36,17 +36,20 @@ Back on the windows machine as soon as you access the websites server, the paylo
 
 ## Attack detection, prevention and response
 
-On the windows machine the download is prevented by Elastic security
-
-![eslastic prevent](https://github.com/user-attachments/assets/44521246-e268-4eaa-beac-fe72a5aa9462)
-
-In the Elastic SIEM an alert is created and there are more details about the event
+### Detection
+In the SIEM an alert is created and there are more details about what happened on the device.
 
 ![elastic alert](https://github.com/user-attachments/assets/ef5b731d-754a-4993-aa92-59a5bc4922d6)
 
 ![alert details](https://github.com/user-attachments/assets/06b6c612-4446-430d-83eb-7bc97fdebfde)
 
-Elastic also provides way to respond if the attack got through security. From this alert we could see that a malicous file was downloaded and could assume new events were not from the user but from an attacker. If the event logs show malicous activity the user could be isolated from the network to contain the threat and end the connection.
+### Prevention
+On the windows machine the download is prevented by Elastic security because it is flagged as malware.
+
+![eslastic prevent](https://github.com/user-attachments/assets/44521246-e268-4eaa-beac-fe72a5aa9462)
+
+### Response
+If the attack got through the security, you can still respond based off of the events. For example, from this alert we could see that a malicous file was downloaded and could assume new events were not from the user but from an attacker. If the event logs show malicous activity the user could be isolated from the network to contain the threat and end the connection.
 
 ![action](https://github.com/user-attachments/assets/49529c9e-ef88-4f52-807c-d5b7c2f97664)
 
