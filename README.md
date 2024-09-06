@@ -2,13 +2,14 @@
 
 ## Project Simulation
 
-This lab simulates a phishing attack on an endpoint device, demonstrating how to detect and respond to the threat effectively. This was done using two virtual machines. The victim machine ran Windows 10, a commonly used operating system, equipped with Elastic Security for threat detection and response. The attacking machine ran Kali Linux, allowing me to utilize its built-in offensive security tools.
+This lab simulates an attack on an endpoint device, demonstrating how to detect and respond to the threat effectively. This was done using two virtual machines. The victim machine ran Windows 10, a commonly used operating system, equipped with Elastic Security for threat detection and response. The attacking machine ran Kali Linux, allowing me to utilize its built-in offensive security tools.
 
 ## Set up
-To set up I had the Kali Linux machine ready and windows 10 machine with Elastic security on the same network. I confirmed that Elastic was recording the events. Also Windows Defender was turned off so Elastic wouldn't be interupted.
+I started by setting up the Windows machine as and endpoint device by adding the Elastic Agent with Elastic Security to it.
 
 ![agentconfirmation](https://github.com/user-attachments/assets/c4a63935-1173-4347-afb6-33ad400602aa)
 
+Next I confirmed that Elastic was logging the events on the device. Also Windows Defender was turned off so Elastic wouldn't be interupted.
 
 ![ipconfigterm](https://github.com/user-attachments/assets/084d705b-db7e-4760-8c2b-620737524f50)
 
@@ -17,11 +18,11 @@ To set up I had the Kali Linux machine ready and windows 10 machine with Elastic
 
 ## Creating the attack
 
-Back on the Kali machine I started creating the payload for a reverse tcp connection, which allows command prompt access of a target device. This was done with msfvenom on the CLI in Kali.
-
+The attack I wanted to create was a reverse TCP connection since I had experminted with it some already. This lets the attacking machine get remote access to a target device from the CLI
+The payload for this attack can be created using the msfvenom tool that comes with Kali.
 ![generate payload new ip](https://github.com/user-attachments/assets/8540c3c6-f4e6-4533-a709-1c1597d64460)
 
-To make this more like a real attack I embeded the payload into a website so that it would automatically download when visted. A victim would be more likely to vist a website link than download a file themselves. This was done using [this tool on Github ](https://github.com/Arno0x/EmbedInHTML)
+To try something new and make this more like a real attack I embeded the payload into a website so that it would automatically download when visted. In a real scenario this webstie could be sent to a user by email and a victim would be more likely to vist a website link than download a file themselves. This was done using [this tool found on Github](https://github.com/Arno0x/EmbedInHTML)
 
 One the payload is embeded in the HTML file it is ran on a server ready to be visted by a victim.
 
